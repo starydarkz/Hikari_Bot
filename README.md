@@ -1,4 +1,4 @@
-# Hiraki Bot
+# Hikari Bot
 ![Avatar del Bot](Logo.jpeg)
 
 Bot diseñado para realizar ciertas automatizaciones en el grupo de Telegram 
