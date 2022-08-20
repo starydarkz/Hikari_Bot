@@ -1,5 +1,4 @@
 #version: 1.0
-
 from telegram.ext import Updater, CommandHandler
 from telegram import update, ChatAction
 from Functions.BasicFunctions import config, definiciones
