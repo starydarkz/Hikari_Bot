@@ -5,7 +5,6 @@ def config():
 def definiciones(palabra):
     ''' Busquedas de definiciones en wikipedia '''
       
-    # from Resources.definiciones import definiciones
     from Functions.definiciones import definiciones
     if palabra in definiciones.keys():
         return definiciones[palabra]
