@@ -3,6 +3,8 @@ from telegram import update, ChatAction
 # Fuciones -> Functions/
 from Functions.BasicFunctions import config, definiciones
 from Functions.TestCode import test 
+# Funciones de Login -> Admin/
+# from Admin import database 
 # Importamos los mensajes 
 import resources
 
@@ -46,6 +48,14 @@ def testcode(update, context):
     answer = test(user_say)
     update.message.reply_text(answer)   
     print('/testcode\nCodigo:', user_say)
+
+def login(update, context):
+    # Registro de Admins
+    context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
+    user_say = " ".join(context.args)
+    answer = test(user_say)
+    update.message.reply_text(answer)   
+    print('/testcode\nCodigo:', user_say) 
 
 #Listeners 
 start_handler = CommandHandler("start", start)

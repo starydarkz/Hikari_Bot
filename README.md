@@ -1,6 +1,10 @@
 # Hikari Bot
 ![Avatar del Bot](Logo.jpeg)
 
+ - [Habilidades](#habilidades)
+ - [Requisitos](#requisitos)
+ - [Para desarrollar](#para-desarrollar)
+
 Bot diseñado para realizar ciertas automatizaciones en el grupo de Telegram 
  - [Habilidades o Comandos que puede realizar](#habilidades)
  - [Requisitos para desarrollar](#requisitos)
@@ -18,7 +22,7 @@ Para el desarrollo del bot, en caso de realizar algún fork o algo parecido, deb
 Para desarrollar el bot, vas a necesitar las dependencias ya mencionadas, para esto puedes ejecutar los siguientes comandos: 
 > Tener Python3 instalado conjunto de PIP
 ```bash
-pip3 install python-telegram-bot telegram wikipedia 
+pip3 install python-telegram-bot telegram wikipedia sqlite
 ```
 ## Para Desarrollar:
 Si deseas colaborar en el proyecto te recomendamos las siguientes etiquitas a la hora de escribir tu commit, esto facilita la tarea a la hora de revisar las modificaciones y evitar fallos.
