@@ -1,4 +1,5 @@
 definiciones = {
+    "stary": "Aun no tengo una biografia clara",
     "threat hunting":"Cyber Threat Hunting\n\nLa caza de amenazas cibernéticas es una actividad de defensa cibernética activa. Es el proceso de búsqueda proactiva e iterativa a través de redes para detectar y aislar amenazas avanzadas que evaden las soluciones de seguridad existentes",
     "cyber threat hunting":"Cyber Threat Hunting\n\nLa caza de amenazas cibernéticas es una actividad de defensa cibernética activa. Es el proceso de búsqueda proactiva e iterativa a través de redes para detectar y aislar amenazas avanzadas que evaden las soluciones de seguridad existentes",
     "hack the box":"Hack The Box \n\nEs una plataforma masiva de capacitación en ciberseguridad en línea, que permite a individuos, empresas, universidades y todo tipo de organizaciones de todo el mundo aumentar sus habilidades de hacking. \n\nPagina web oficial:\nwww.hackthebox.com",
