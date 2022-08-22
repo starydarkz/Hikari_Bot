@@ -4,7 +4,8 @@ from telegram import update, ChatAction
 from Functions.BasicFunctions import config, definiciones
 from Functions.TestCode import test 
 # Funciones de Login -> Admin/
-# from Admin import database 
+from Admin import database 
+import sqlite3 as sql
 # Importamos los mensajes 
 import resources
 
@@ -50,6 +51,7 @@ def testcode(update, context):
     print('/testcode\nCodigo:', user_say)
 
 def login(update, context):
+    # Trabajando
     # Registro de Admins
     context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
     user_say = " ".join(context.args)
