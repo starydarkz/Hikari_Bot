@@ -13,6 +13,13 @@ Bot diseñado para realizar ciertas automatizaciones en el grupo de Telegram
 Para el desarrollo del bot, en caso de realizar algún fork o algo parecido, debe tener en cuenta lo siguiente:
  - Python3 
  - Token de Telgram
+ - Wikipedia
+
+Para desarrollar el bot, vas a necesitar las dependencias ya mencionadas, para esto puedes ejecutar los siguientes comandos: 
+> Tener Python3 instalado conjunto de PIP
+```bash
+pip3 install python-telegram-bot telegram wikipedia 
+```
 ## Para Desarrollar:
 Si deseas colaborar en el proyecto te recomendamos las siguientes etiquitas a la hora de escribir tu commit, esto facilita la tarea a la hora de revisar las modificaciones y evitar fallos.
  - feat: La nueva característica que agregas a una aplicación en particular

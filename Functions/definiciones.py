@@ -25,4 +25,3 @@ definiciones = {
     "django":"Django \n\nEs un framework de desarrollo web de código abierto, escrito en Python, que respeta el patrón de diseño conocido como modelo-vista-controlador (MVC).",
     "webscraping":"Web scraping o raspado web \n\nEs una técnica utilizada mediante programas de software para extraer información de sitios web.​ Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación."
 }
-
