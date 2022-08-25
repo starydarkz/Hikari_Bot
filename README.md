@@ -18,11 +18,12 @@ Para el desarrollo del bot, en caso de realizar algún fork o algo parecido, deb
  - Python3 
  - Token de Telgram
  - Wikipedia
+ - docker
 
 Para desarrollar el bot, vas a necesitar las dependencias ya mencionadas, para esto puedes ejecutar los siguientes comandos: 
 > Tener Python3 instalado conjunto de PIP
 ```bash
-pip3 install python-telegram-bot telegram wikipedia sqlite
+pip3 install -r requirements.txt 
 ```
 ## Para Desarrollar:
 Si deseas colaborar en el proyecto te recomendamos las siguientes etiquitas a la hora de escribir tu commit, esto facilita la tarea a la hora de revisar las modificaciones y evitar fallos.
