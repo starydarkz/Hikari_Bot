@@ -34,5 +34,15 @@ Si deseas colaborar en el proyecto te recomendamos las siguientes etiquitas a la
  - docs: Todo lo relacionado con documentación
  - chore: Mantenimiento de código regular.
 
+**Docker**
+```bash
+echo "MySQL"
+# MySQL
+docker run -v ~/personal/Hikari_Bot/basededatos/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=hikari -p 3306:3306 --name Hikari_DB -d mysql
+
+# EXEC
+docker exec -it Hikari_DB mysql -u root -p
+```
+
 ## Comunicate con Nosotros
 Cualquier bug o mejora reportarlo en @AprenderPython en Telegram
