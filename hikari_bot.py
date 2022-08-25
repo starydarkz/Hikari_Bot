@@ -1,8 +1,7 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import update, ChatAction
 # Fuciones -> Functions/
-from Functions.BasicFunctions import config, definiciones
-from Functions.TestCode import test 
+from Functions.BasicFunctions import config, definiciones, test
 # Importamos los mensajes 
 import resources
 
