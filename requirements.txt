@@ -1,5 +1,4 @@
 python-telegram-bot
 telegram
 wikipedia
-sqlite3
 docker

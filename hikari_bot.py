@@ -1,11 +1,8 @@
-from telegram.ext import Updater, CommandHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import update, ChatAction
 # Fuciones -> Functions/
 from Functions.BasicFunctions import config, definiciones
 from Functions.TestCode import hikari_docker 
-# Funciones de Login -> Admin/
-from Admin import database 
-import sqlite3 as sql
 # Importamos los mensajes 
 import resources
 
@@ -17,7 +14,8 @@ test = hikari_docker()
 def start(update, context):
     # Saluda a hikari 
     context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
-    saludos = resources.saludo()
+    usuario = update.effective_user['first_name']
+    saludos = resources.saludo() + " @" +usuario
     context.bot.send_message(chat_id=update.effective_chat.id, text=saludos)
     print('/start')
 
@@ -45,8 +43,8 @@ def quees(update, context):
 
 def testcode(update, context):
     # Enviamos pequeños datos a la hora de enviar codigo 
-    #consideracion = resources.test()
-    #context.bot.send_message(chat_id=update.effective_chat.id, text=consideracion)
+    consideracion = resources.test()
+    context.bot.send_message(chat_id=update.effective_chat.id, text=consideracion)
     # Testeador de codigo
     username = update.effective_user['first_name']
     codigo = update.message.text
@@ -56,22 +54,14 @@ def testcode(update, context):
     answer = test.result.decode().split('\n')[1]
     update.message.reply_text(answer)
 
-def login(update, context):
-    # Trabajando
-    # Registro de Admins
-    context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
-    user_say = " ".join(context.args)
-    answer = test(user_say)
-    update.message.reply_text(answer)   
-    print('/testcode\nCodigo:', user_say) 
-
 #Listeners 
 start_handler = CommandHandler("start", start)
 help_handler = CommandHandler("help", help)
 rules_handler = CommandHandler("rules", rules)
 quees_handler = CommandHandler("quees", quees)
-testcode_handler = CommandHandler("testcode", testcode)
+testcode_handler = MessageHandler(Filters.text, testcode)
 
+#Commands
 updater.dispatcher.add_handler(start_handler)
 updater.dispatcher.add_handler(help_handler)
 updater.dispatcher.add_handler(rules_handler)
