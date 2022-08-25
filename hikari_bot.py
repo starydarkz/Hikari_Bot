@@ -2,7 +2,7 @@ from telegram.ext import Updater, CommandHandler
 from telegram import update, ChatAction
 # Fuciones -> Functions/
 from Functions.BasicFunctions import config, definiciones
-from Functions.TestCode import test 
+from Functions.TestCode import hikari_docker 
 # Funciones de Login -> Admin/
 from Admin import database 
 import sqlite3 as sql
@@ -11,6 +11,7 @@ import resources
 
 token = config()
 updater = Updater(token=token, use_context=True)
+test = hikari_docker()
 
 #Commands
 def start(update, context):
@@ -43,12 +44,17 @@ def quees(update, context):
     print('/quees', user_say)
 
 def testcode(update, context):
+    # Enviamos pequeños datos a la hora de enviar codigo 
+    #consideracion = resources.test()
+    #context.bot.send_message(chat_id=update.effective_chat.id, text=consideracion)
     # Testeador de codigo
-    context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
-    user_say = " ".join(context.args)
-    answer = test(user_say)
-    update.message.reply_text(answer)   
-    print('/testcode\nCodigo:', user_say)
+    username = update.effective_user['first_name']
+    codigo = update.message.text
+    salida = codigo.replace('/testcode ',"")
+    print(f'/testcode\nUsername: {username} \nCodigo:\n{salida}')
+    test.run_test(username, "reto_1", salida)
+    answer = test.result.decode().split('\n')[1]
+    update.message.reply_text(answer)
 
 def login(update, context):
     # Trabajando
