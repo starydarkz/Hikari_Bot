@@ -48,10 +48,11 @@ def testcode(update, context):
     # Testeador de codigo
     username = update.effective_user['first_name']
     codigo = update.message.text
-    salida = codigo.replace('/testcode ',"")
+    salida = codigo.replace('/testcode ',"")    # por si el código es el argumento
+    salida = codigo.replace('/testcode',"")     # por si el código está en una línea nueva
     print(f'/testcode\nUsername: {username} \nCodigo:\n{salida}')
     test.run_test(username, "reto_1", salida)
-    answer = test.result.decode().split('\n')[1]
+    answer = test.result.decode()#.split('\n')[1]
     update.message.reply_text(answer)
 
 #Listeners 
