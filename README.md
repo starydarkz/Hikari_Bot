@@ -1,5 +1,5 @@
 # Hikari Bot
-![Avatar del Bot](Logo.jpeg)
+![Avatar del Bot](Resources/Logo.jpeg)
 
 Bot diseñado para realizar ciertas automatizaciones en el grupo de Telegram 
  - [Habilidades o Comandos que puede realizar](#habilidades)

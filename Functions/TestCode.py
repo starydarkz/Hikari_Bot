@@ -1,7 +1,8 @@
-import os
+
 def test(codigo):
+    from os import system
     # Guardamos el codigo
-    os.system(f"echo '{codigo}' > temp.py")
+    system(f"echo '{codigo}' > temp.py")
     ejecucion = os.system("python3 temp.py")
     if ejecucion==0:
         print(type(ejecucion), ejecucion)

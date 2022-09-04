@@ -26,3 +26,7 @@ definiciones = {
     "django":"Django \n\nEs un framework de desarrollo web de código abierto, escrito en Python, que respeta el patrón de diseño conocido como modelo-vista-controlador (MVC).",
     "webscraping":"Web scraping o raspado web \n\nEs una técnica utilizada mediante programas de software para extraer información de sitios web.​ Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación."
 }
+
+saludo = ["saludo","Hola Humano :)","Holaa", "Aqui estoy 👋","Hikari: On \n:b"]
+ms_help = """Hi, mi nombre es Hikari y aqui podras aprender a usarme :)\n\nLos comandos disponibles son:\n/start - Saludame y veras si estoy viva.\n/help - Invoca este mensaje de ayuda.\n/rules - Invoca las reglas de la comunidad.\n/quees - Busca alguna definicion de algo.\nCreate by: @aprenderpython\nCode: github.com/staryzadkz/hikari_bot """
+rules = """Objetivos del grupo:\n\nGrupo enfocado en aprender Python practicando y resolviendo problemas desde el nivel mas básico y área relacionada con Python, retos e ideas de programas constantes para practicar y proyectos en grupo.\n\nReglas:\n\n1.)No insultar a otros miembros\n2.)Respetar las opiniones de los demás.\n3.)No hacer spam  de offtopic.\n4.)Antes de hacer una pregunta investigar.\n5.)Enviar imagen o link en vez de codigo por chat.\n"""

@@ -1,43 +1,58 @@
+#Verion Beta
+
 from telegram.ext import Updater, CommandHandler
 from telegram import update, ChatAction
-# Fuciones -> Functions/
+
+#Librerias locales
 from Functions.BasicFunctions import config, definiciones
 from Functions.TestCode import test 
-# Importamos los mensajes 
-import resources
+
+
 
 token = config()
 updater = Updater(token=token, use_context=True)
 
 #Commands
 def start(update, context):
-    # Saluda a hikari 
+    """Saluda a hikari"""
+    
+    from Functions.BasicFunctions import saludo
+    saludos = saludo()
+
     context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
-    saludos = resources.saludo()
     context.bot.send_message(chat_id=update.effective_chat.id, text=saludos)
-    print('/start')
+        #Debug
+    print('Comando ejecutado: start')
 
 def help(update, context):
-    # Acerca de Hikari Bot
-    help = resources.help() 
+    """ Acerca de Hikari Bot"""
+    
+    from Functions.BasicFunctions import help
+    
     context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text=help)
-    print('/help')
+    
+        #Debub
+    print('Comando ejecutado: help')
 
 def rules(update, context):
     # Reglas de la comunidad AprenderPython
-    rules = resources.rules() 
+    from Functions.BasicFunctions import rules
     context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text=rules)
-    print('/rules')
+    print('Comando ejecutado: rules')
 
 def quees(update, context):
-    # Busqueda de definiciones
+    """Busqueda de definiciones"""
+    from Functions.BasicFunctions import definiciones
+
     context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
     user_say = " ".join(context.args)
     answer = definiciones(user_say)
     update.message.reply_text(answer)   
-    print('/quees', user_say)
+
+    #Debug
+    print('Comando ejecutado: quees ', user_say)
 
 def testcode(update, context):
     # Testeador de codigo
