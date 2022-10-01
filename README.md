@@ -21,13 +21,9 @@ Para el desarrollo del bot, en caso de realizar algún fork o algo parecido, deb
 pip3 install -r requeriments.txt
 ```
 2. Configurar el token del bot Resources>credentials.py
+
 tokentelegrambot = 'AQUI VA TU TOKEN'
 
-Para desarrollar el bot, vas a necesitar las dependencias ya mencionadas, para esto puedes ejecutar los siguientes comandos: 
-> Tener Python3 instalado conjunto de PIP
-```bash
-pip3 install python-telegram-bot telegram wikipedia 
-```
 ## Para Desarrollar:
 Si deseas colaborar en el proyecto te recomendamos las siguientes etiquitas a la hora de escribir tu commit, esto facilita la tarea a la hora de revisar las modificaciones y evitar fallos.
  - feat: La nueva característica que agregas a una aplicación en particular
