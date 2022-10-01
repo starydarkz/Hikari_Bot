@@ -15,6 +15,14 @@ Para el desarrollo del bot, en caso de realizar algún fork o algo parecido, deb
  - Token de Telgram
  - Wikipedia
 
+## Instalacion y Configuracion:
+1. Instalar las dependencias
+```bash
+pip3 install -r requeriments.txt
+```
+2. Configurar el token del bot Resources>credentials.py
+tokentelegrambot = 'AQUI VA TU TOKEN'
+
 Para desarrollar el bot, vas a necesitar las dependencias ya mencionadas, para esto puedes ejecutar los siguientes comandos: 
 > Tener Python3 instalado conjunto de PIP
 ```bash
