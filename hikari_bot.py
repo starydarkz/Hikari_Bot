@@ -2,25 +2,16 @@
 
 from telegram.ext import Updater, CommandHandler
 from telegram import update, ChatAction
-
-#Librerias locales
-from Functions.BasicFunctions import config, definiciones
-from Functions.TestCode import test 
-
-
-
-token = config()
-updater = Updater(token=token, use_context=True)
+from Resources.credentials import tokentelegrambot as tokenbot
 
 #Commands
 def start(update, context):
     """Saluda a hikari"""
     
     from Functions.BasicFunctions import saludo
-    saludos = saludo()
 
     context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text=saludos)
+    context.bot.send_message(chat_id=update.effective_chat.id, text=saludo())
         #Debug
     print('Comando ejecutado: start')
 
@@ -54,25 +45,16 @@ def quees(update, context):
     #Debug
     print('Comando ejecutado: quees ', user_say)
 
-def testcode(update, context):
-    # Testeador de codigo
-    context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
-    user_say = " ".join(context.args)
-    answer = test(user_say)
-    update.message.reply_text(answer)   
-    print('/testcode\nCodigo:', user_say)
+#Start Hikari
+updater = Updater(token=tokenbot, use_context=True)
 
-#Listeners 
 start_handler = CommandHandler("start", start)
-help_handler = CommandHandler("help", help)
-rules_handler = CommandHandler("rules", rules)
-quees_handler = CommandHandler("quees", quees)
-testcode_handler = CommandHandler("testcode", testcode)
-
 updater.dispatcher.add_handler(start_handler)
+help_handler = CommandHandler("help", help)
 updater.dispatcher.add_handler(help_handler)
+rules_handler = CommandHandler("rules", rules)
 updater.dispatcher.add_handler(rules_handler)
+quees_handler = CommandHandler("quees", quees)
 updater.dispatcher.add_handler(quees_handler)
-updater.dispatcher.add_handler(testcode_handler)
 
 updater.start_polling()

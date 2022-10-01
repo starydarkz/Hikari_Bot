@@ -1,15 +1,11 @@
 
 
-def config():
-    # Inserción del token
-    return input("Escribe el token: ")
-
 def definiciones(palabra):
     """ Definiciones de palabras """
     
     from Resources.DataBase import definiciones
     
-    if palabra in definiciones.keys(): # Buscamos en el diccionario  
+    if palabra.lower() in definiciones.keys(): # Buscamos en el diccionario  
         return definiciones[palabra]
     else:
         import wikipedia # Buscamos la definicion en Wikipedia
