@@ -29,5 +29,5 @@ definiciones = {
 }
 
 saludo = ["saludo","Hola Humano :)","Holaa", "Aqui estoy 👋","Hikari: On \n:b"]
-ms_help = """Hi, mi nombre es Hikari y aqui podras aprender a usarme :)\n\nLos comandos disponibles son:\n/start - Saludame y veras si estoy viva.\n/help - Invoca este mensaje de ayuda.\n/rules - Invoca las reglas de la comunidad.\n/quees - Busca alguna definicion de algo.\nCreate by: @aprenderpython\nCode: github.com/staryzadkz/hikari_bot\nMas informacion sobre actualizaciones:\nt.me/hikari_channel"""
+help = """Hi, mi nombre es Hikari y aqui podras aprender a usarme :)\n\nLos comandos disponibles son:\n/start - Saludame y veras si estoy viva.\n/help - Invoca este mensaje de ayuda.\n/rules - Invoca las reglas de la comunidad.\n/quees - Busca alguna definicion de algo.\nCreate by: @aprenderpython\nCode: github.com/staryzadkz/hikari_bot\nMas informacion sobre actualizaciones:\nt.me/hikari_channel"""
 rules = """Objetivos del grupo:\n\nGrupo enfocado en aprender Python practicando y resolviendo problemas desde el nivel mas básico y área relacionada con Python, retos e ideas de programas constantes para practicar y proyectos en grupo.\n\nReglas:\n\n1.)No insultar a otros miembros\n2.)Respetar las opiniones de los demás.\n3.)No hacer spam  de offtopic.\n4.)Antes de hacer una pregunta investigar.\n5.)Enviar imagen o link en vez de codigo por chat.\n"""

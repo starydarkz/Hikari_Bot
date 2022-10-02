@@ -18,7 +18,7 @@ def start(update, context):
 def help(update, context):
     """ Acerca de Hikari Bot"""
     
-    from Functions.BasicFunctions import help
+    from Resources.DataBase import help
     
     context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text=help)
@@ -27,8 +27,9 @@ def help(update, context):
     print('Comando ejecutado: help')
 
 def rules(update, context):
-    # Reglas de la comunidad AprenderPython
-    from Functions.BasicFunctions import rules
+    """Reglas de la comunidad AprenderPython"""
+
+    from Resources.DataBase import rules
     context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text=rules)
     print('Comando ejecutado: rules')

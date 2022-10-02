@@ -22,11 +22,3 @@ def saludo():
     from Resources.DataBase import saludo
     from random import choice
     return choice(saludo)
-
-def help():
-    from Resources.DataBase import msj_help
-    return msj_help
-
-def rules():
-    from Resources.DataBase import rules
-    return rules
