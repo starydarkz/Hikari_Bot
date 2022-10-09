@@ -1,6 +1,6 @@
 /.idea/
 */__pycache__
 */__pycache__/
-*/credentials.py
 __pycache__/
+/Resources/credentials.py
 .token
