@@ -1,1 +1,1 @@
-tokentelegrambot = ''
+tokentelegrambot = input("Insert your token: ")
