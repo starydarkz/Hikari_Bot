@@ -20,9 +20,8 @@ Para el desarrollo del bot, en caso de realizar algún fork o algo parecido, deb
 ```bash
 pip3 install -r requeriments.txt
 ```
-2. Configurar el token del bot Resources>credentials.py
+2. Configurar el token del bot en la variable "tokenbot = '' "
 
-tokentelegrambot = 'AQUI VA TU TOKEN'
 
 ## Para Desarrollar:
 Si deseas colaborar en el proyecto te recomendamos las siguientes etiquitas a la hora de escribir tu commit, esto facilita la tarea a la hora de revisar las modificaciones y evitar fallos.
